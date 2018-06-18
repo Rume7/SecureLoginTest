@@ -65,7 +65,7 @@ public class LoginController extends HttpServlet {
 		}
 		
 		// exceeded logins
-		if (loginAttempts > 2) {
+		if (loginAttempts > 3) {
 			String errorMessage = "Error: Number of Login Attempts exceeded";
 			request.setAttribute("errorMessage", errorMessage);
 			url = "index.jsp";

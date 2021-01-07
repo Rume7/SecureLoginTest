@@ -17,7 +17,7 @@ import com.codehacks.utilities.PasswordService;
 /**
  * Servlet implementation class LoginController
  */
-@WebServlet(description = "A controller for handling user logins", urlPatterns = {"/Login"})
+@WebServlet(description = "A controller for handling user logins", urlPatterns = {"/login"})
 public class LoginController extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
@@ -67,7 +67,7 @@ public class LoginController extends HttpServlet {
 		// exceeded logins
 		if (loginAttempts > 3) {
 			//String errorMessage = "Error: Number of Login Attempts exceeded";
-			String errorMessage = "Exceeded 4 login attempts...";
+			String errorMessage = "Exceeded 3 login attempts...";
 			request.setAttribute("errorMessage", errorMessage);
 			url = "index.jsp";
 		} else {		// proceed
